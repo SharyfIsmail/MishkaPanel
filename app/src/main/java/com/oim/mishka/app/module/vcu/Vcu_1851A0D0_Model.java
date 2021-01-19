@@ -12,6 +12,14 @@ public class Vcu_1851A0D0_Model implements DataFromDeviceModel {
     private ObservableInt speed;
     private ObservableField<String> motionMode;
 
+    public ObservableInt getSpeed() {
+        return speed;
+    }
+
+    public ObservableField<String> getMotionMode() {
+        return motionMode;
+    }
+
     public Vcu_1851A0D0_Model(){
         vcu_1851A0D0 = new Vcu_1851A0D0();
         speed = new ObservableInt(0);

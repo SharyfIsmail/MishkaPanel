@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Mishka</string>
+    <string name="SpeedPanelImage">SpeedPanel:</string>
+
+    <string name="km_peer_hour">Km/h</string>
+    <string name="km_hour_0">0</string>
+    <string name="km_hour_20">20</string>
+    <string name="km_hour_40">40</string>
+    <string name="km_hour_60">60</string>
+    <string name="km_hour_80">80</string>
+    <string name="km_hour_100">100</string>
+    <string name="km_hour_120">120</string>
+    <string name="km_hour_140">140</string>
+
 </resources>
