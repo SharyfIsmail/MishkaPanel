@@ -7,11 +7,7 @@ import androidx.databinding.BindingAdapter;
 import androidx.lifecycle.ViewModel;
 
 public class ProgressBarAdapter extends ViewModel {
-    private Context context;
 
-    public ProgressBarAdapter(Context context){
-        this.context = context;
-    }
     @BindingAdapter("android:SpeedProgressBar")
     public static void setSpeedProgess(ProgressBar speedProgess, int value){
         speedProgess.setProgress(setSpeedProgress(value));
