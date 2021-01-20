@@ -4,8 +4,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 <data>
 <variable
-    name="VcuToAll"
-    type="com.oim.mishka.app.module.vcu.Vcu_1851A0D0_Model" />
+    name="VcuToAll_01_Model"
+    type="com.oim.mishka.app.module.vcu.VcuToAll_01_Model" />
 
 </data>
 
@@ -43,7 +43,7 @@
                 android:layout_width="212dp"
                 android:layout_height="63dp"
                 android:gravity="center"
-                android:text="@{String.valueOf(VcuToAll.speed)}"
+                android:text="@{String.valueOf(VcuToAll_01_Model.speed)}"
                 android:textColor="#F4F0F0"
                 android:textSize="50sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -71,11 +71,12 @@
                 style="@style/speedBarStyle"
                 android:layout_width="382dp"
                 android:layout_height="374dp"
+                android:SpeedProgressBar="@{VcuToAll_01_Model.speed}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:progress="0" />
+                tools:progress="80" />
 
             <TextView
                 android:id="@+id/speed_0"
@@ -86,7 +87,7 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.221"
+                app:layout_constraintHorizontal_bias="0.236"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.927" />
@@ -100,10 +101,10 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintHorizontal_bias="0.015"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.716" />
+                app:layout_constraintVertical_bias="0.634" />
 
             <TextView
                 android:id="@+id/speed_40"
@@ -114,10 +115,10 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintHorizontal_bias="0.077"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.274" />
+                app:layout_constraintVertical_bias="0.23" />
 
             <TextView
                 android:id="@+id/speed_60"
@@ -128,10 +129,10 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.296"
+                app:layout_constraintHorizontal_bias="0.311"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.009" />
 
             <TextView
                 android:id="@+id/speed_80"
@@ -142,7 +143,7 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.703"
+                app:layout_constraintHorizontal_bias="0.683"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.009" />
@@ -156,10 +157,10 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.984"
+                app:layout_constraintHorizontal_bias="0.942"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.274" />
+                app:layout_constraintVertical_bias="0.23" />
 
             <TextView
                 android:id="@+id/speed_120"
@@ -170,10 +171,10 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.984"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.716" />
+                app:layout_constraintVertical_bias="0.634" />
 
             <TextView
                 android:id="@+id/speed_140"
@@ -184,7 +185,7 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.819"
+                app:layout_constraintHorizontal_bias="0.789"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.927" />
@@ -193,7 +194,7 @@
                 android:id="@+id/motionMode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{VcuToAll.motionMode}"
+                android:text="@{VcuToAll_01_Model.motionMode}"
                 android:textColor="#FFEB3B"
                 android:textSize="50sp"
                 app:layout_constraintBottom_toBottomOf="parent"

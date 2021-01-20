@@ -2,12 +2,12 @@ package com.oim.mishka.app.module.battery.model;
 
 import androidx.databinding.ObservableFloat;
 
-import com.oim.mishka.Battery.tx.Battery_18B4D0F3;
+import com.oim.mishka.Battery.tx.BmsVcu_04;
 import com.oim.mishka.can.candata.DataFromDevice;
 import com.oim.mishka.can.candata.DataFromDeviceModel;
 
-public class Battery_18B4D0F3_Model  implements DataFromDeviceModel {
-    private Battery_18B4D0F3 battery_18B4D0F3;
+public class BmsVcu_04_Model implements DataFromDeviceModel {
+    private BmsVcu_04 bmsVcu04;
 
     public ObservableFloat getTotalVoltage() {
         return totalVoltage;
@@ -15,17 +15,17 @@ public class Battery_18B4D0F3_Model  implements DataFromDeviceModel {
 
     private ObservableFloat totalVoltage;
 
-    public Battery_18B4D0F3_Model(){
-        battery_18B4D0F3 = new Battery_18B4D0F3();
+    public BmsVcu_04_Model(){
+        bmsVcu04 = new BmsVcu_04();
         totalVoltage = new ObservableFloat(0.0f);
     }
     @Override
     public void updateModel() {
-        totalVoltage.set(battery_18B4D0F3.getBatteryVoltage());
+        totalVoltage.set(bmsVcu04.getBatteryVoltage());
     }
 
     @Override
     public DataFromDevice getDataFromDevice() {
-        return battery_18B4D0F3;
+        return bmsVcu04;
     }
 }

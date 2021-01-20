@@ -3,7 +3,7 @@ package com.oim.mishka.Battery.tx;
 import com.oim.mishka.can.candata.DataFromDevice;
 import com.oim.mishka.util.Parser;
 
-public class Battery_CB3D0F3  implements DataFromDevice {
+public class BmsVcu_03 implements DataFromDevice {
     private int soc;
     public int getSoc() {
         return soc;

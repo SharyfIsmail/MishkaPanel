@@ -1,39 +1,36 @@
 package com.oim.mishka.app.module.battery;
 
-import com.oim.mishka.app.module.battery.model.Battery_18B4D0F3_Model;
-import com.oim.mishka.app.module.battery.model.Battery_CB1D0F3_Model;
-import com.oim.mishka.app.module.battery.model.Battery_CB2D0F3_Model;
-import com.oim.mishka.app.module.battery.model.Battery_CB3D0F3_Model;
+import com.oim.mishka.app.module.battery.model.BmsVcu_04_Model;
+import com.oim.mishka.app.module.battery.model.BmsVcu_01_Model;
+import com.oim.mishka.app.module.battery.model.BmsVcu_02_Model;
+import com.oim.mishka.app.module.battery.model.BmsVcu_03_Model;
 
 public class BatteryDataMonitor {
-    private Battery_18B4D0F3_Model battery_18B4D0F3_model;
-    private Battery_CB1D0F3_Model battery_cb1D0F3_model;
-    private Battery_CB2D0F3_Model battery_cb2D0F3_model;
-    private Battery_CB3D0F3_Model battery_cb3D0F3_model;
+    private BmsVcu_04_Model bmsVcu04_model;
+    private BmsVcu_01_Model bmsVcu01_model;
+    private BmsVcu_02_Model bmsVcy02_model;
+    private BmsVcu_03_Model bmsVcu03_model;
 
-    public BatteryDataMonitor( Battery_18B4D0F3_Model battery_18B4D0F3_model,
-                               Battery_CB1D0F3_Model battery_cb1D0F3_model,
-                               Battery_CB2D0F3_Model battery_cb2D0F3_model,
-                               Battery_CB3D0F3_Model battery_cb3D0F3_model){
-        this.battery_18B4D0F3_model = battery_18B4D0F3_model;
-        this.battery_cb1D0F3_model = battery_cb1D0F3_model;
-        this.battery_cb2D0F3_model = battery_cb2D0F3_model;
-        this.battery_cb3D0F3_model = battery_cb3D0F3_model;
+    public BatteryDataMonitor(){
+        bmsVcu04_model = new BmsVcu_04_Model();
+        bmsVcu01_model = new BmsVcu_01_Model();
+        bmsVcy02_model = new BmsVcu_02_Model();
+        bmsVcu03_model = new BmsVcu_03_Model();
     }
 
-    public Battery_18B4D0F3_Model getBattery_18B4D0F3_model() {
-        return battery_18B4D0F3_model;
+    public BmsVcu_04_Model getBmsVcu04_model() {
+        return bmsVcu04_model;
     }
 
-    public Battery_CB1D0F3_Model getBattery_cb1D0F3_model() {
-        return battery_cb1D0F3_model;
+    public BmsVcu_01_Model getBmsVcu01_model() {
+        return bmsVcu01_model;
     }
 
-    public Battery_CB2D0F3_Model getBattery_cb2D0F3_model() {
-        return battery_cb2D0F3_model;
+    public BmsVcu_02_Model getBmsVcy02_model() {
+        return bmsVcy02_model;
     }
 
-    public Battery_CB3D0F3_Model getBattery_cb3D0F3_model() {
-        return battery_cb3D0F3_model;
+    public BmsVcu_03_Model getBmsVcu03_model() {
+        return bmsVcu03_model;
     }
 }

@@ -3,7 +3,7 @@ package com.oim.mishka.Battery.tx;
 import com.oim.mishka.can.candata.DataFromDevice;
 import com.oim.mishka.util.Parser;
 
-public class Battery_18B4D0F3 implements DataFromDevice {
+public class BmsVcu_04 implements DataFromDevice {
     private float batteryVoltage ;
     private float maxCellVoltage ;
     private float minCellVoltage ;

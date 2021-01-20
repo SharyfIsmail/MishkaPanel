@@ -6,7 +6,7 @@ import com.oim.mishka.util.Parser;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Battery_CB1D0F3  implements DataFromDevice {
+public class BmsVcu_01 implements DataFromDevice {
     private String batteryStatus;
     private byte batteryError;
 

@@ -6,7 +6,7 @@ import com.oim.mishka.util.Parser;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Vcu_1851A0D0 implements DataFromDevice {
+public class VcuToAll_01 implements DataFromDevice {
     private int speed ;
     private  String motionMode;
     private String systemMode;
