@@ -28,9 +28,14 @@ public class MainActivity extends AppCompatActivity {
         unitMapper = new UnitMapper();
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.setVcuToAll01Model(unitMapper.getVcuToAll_01_Model());
+        activityMainBinding.setBmsVcu03Model(unitMapper.getBatteryDataMonitor().getBmsVcu03_model());
+        activityMainBinding.setInvVcu03(unitMapper.getInv_vcu_03_model());
+
 
         receiveThread = new ReceiveThread();
         receiveThread.setFuck(unitMapper.getVcuToAll_01_Model());
+        receiveThread.setFuck1(unitMapper.getBatteryDataMonitor().getBmsVcu03_model());
+        receiveThread.setFuck2(unitMapper.getInv_vcu_03_model());
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.oim.mishka.app.threads;
 
+import com.oim.mishka.app.module.battery.model.BmsVcu_03_Model;
+import com.oim.mishka.app.module.invertor.Inv_vcu_03_Model;
 import com.oim.mishka.app.module.vcu.VcuToAll_01_Model;
 import com.oim.mishka.can.Can;
 import com.oim.mishka.can.candata.DataFromDeviceModel;
@@ -15,6 +17,8 @@ public class ReceiveThread extends Thread {
     private Map<Integer, DataFromDeviceModel> canPackage ;
     private UsbConnector usbConnector ;
     private VcuToAll_01_Model vcuToAll_01;
+    private BmsVcu_03_Model bmsVcu_03_model;
+    private Inv_vcu_03_Model inv_vcu_03_model;
     public Map<Integer, DataFromDeviceModel> getCanPackage() {
         return canPackage;
     }
@@ -23,6 +27,8 @@ public class ReceiveThread extends Thread {
         return usbConnector;
     }
 int i = 0;
+    int b = 0;
+    int j = -40;
     public void setUsbConnector(UsbConnector usbConnector) {
         this.usbConnector = usbConnector;
     }
@@ -34,7 +40,11 @@ int i = 0;
         try {
             Thread.sleep(500);
             vcuToAll_01.getSpeed().set(i);
+            bmsVcu_03_model.getSoc().set(b);
+            inv_vcu_03_model.getInvertorTemp().set(j);
+            b = b == 100? 0 :++b;
             i = i == 140 ? 0: ++i;
+            j = j == 160 ? -40: ++j;
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -76,5 +86,11 @@ int i = 0;
     }
     public void setFuck(VcuToAll_01_Model sdsd){
         vcuToAll_01 = sdsd;
+    }
+    public void setFuck1(BmsVcu_03_Model sdsd){
+        bmsVcu_03_model = sdsd;
+    }
+    public void setFuck2(Inv_vcu_03_Model sdsd){
+        inv_vcu_03_model = sdsd;
     }
 }

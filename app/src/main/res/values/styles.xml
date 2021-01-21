@@ -12,7 +12,17 @@
     </style>
 
     <style name="speedBarStyle">
+         <item name="android:indeterminateOnly">false</item>
+         <item name="android:progressDrawable">@drawable/speed_arc_bar</item>
+    </style>
+
+    <style name="batteryBarStyle">
         <item name="android:indeterminateOnly">false</item>
-        <item name="android:progressDrawable">@drawable/speed_arc_bar</item>
+        <item name="android:progressDrawable">@drawable/battery_arc_bar</item>
+    </style>
+
+    <style name="tempBarStyle">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/temp_arc_bar</item>
     </style>
 </resources>

@@ -13,6 +13,10 @@ public class BmsVcu_03_Model implements DataFromDeviceModel {
         bmsVcu03 = new BmsVcu_03();
         soc = new ObservableInt(0);
     }
+    public ObservableInt getSoc() {
+        return soc;
+    }
+
     @Override
     public void updateModel() {
         soc.set(bmsVcu03.getSoc());

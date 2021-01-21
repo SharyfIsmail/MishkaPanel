@@ -14,6 +14,10 @@ public class Inv_vcu_03_Model implements DataFromDeviceModel {
         invertorTemp = new ObservableInt(0);
     }
 
+    public ObservableInt getInvertorTemp() {
+        return invertorTemp;
+    }
+
     @Override
     public void updateModel() {
         invertorTemp.set(inv_vcu_03.getInvertorTemp());

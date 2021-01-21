@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Mishka</string>
+
     <string name="SpeedPanelImage">SpeedPanel:</string>
+    <string name="BatteryPanelImage">BatteryPanel:</string>
+    <string name="HeatPanelImage">HeatPanel:</string>
 
     <string name="km_peer_hour">Km/h</string>
     <string name="km_hour_0">0</string>
@@ -11,5 +14,11 @@
     <string name="km_hour_100">100</string>
     <string name="km_hour_120">120</string>
     <string name="km_hour_140">140</string>
+
+    <string name="percent">%</string>
+
+    <string name="temp">°С</string>
+
+
 
 </resources>
