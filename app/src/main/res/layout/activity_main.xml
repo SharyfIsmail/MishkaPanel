@@ -12,6 +12,9 @@
         <variable
             name="inv_vcu_03"
             type="com.oim.mishka.app.module.invertor.Inv_vcu_03_Model" />
+        <variable
+            name="BmsVcu_02_Model"
+            type="com.oim.mishka.app.module.battery.model.BmsVcu_02_Model"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,13 +25,13 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_height="280dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="0.70">
 
             <ImageView
                 android:id="@+id/heatpanel"
@@ -55,6 +58,48 @@
                 tools:progress="50"/>
 
             <TextView
+                android:id="@+id/temp0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temp_0"
+                android:textColor="#F4F0F0"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.478"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/temp40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temp_40"
+                android:textColor="#F4F0F0"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.869"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.866" />
+
+            <TextView
+                android:id="@+id/temp160"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temp_160"
+                android:textColor="#F4F0F0"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.289"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.008" />
+
+            <TextView
                 android:id="@+id/Temp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,9 +109,10 @@
                 android:textSize="25sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.263" />
+                app:layout_constraintVertical_bias="0.313" />
 
             <TextView
                 android:id="@+id/tempValue"
@@ -78,10 +124,10 @@
                 android:textSize="35sp"
                 app:layout_constraintBottom_toBottomOf="@+id/heatpanel"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintHorizontal_bias="0.506"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/heatpanel"
-                app:layout_constraintVertical_bias="0.374" />
+                app:layout_constraintVertical_bias="0.433" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -91,7 +137,7 @@
             android:layout_height="450dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.33"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.1">
@@ -110,7 +156,7 @@
                 app:srcCompat="@drawable/ic_speedpanel" />
 
             <TextView
-                android:id="@+id/speed"
+                android:id="@+id/speedValue"
                 android:layout_width="212dp"
                 android:layout_height="63dp"
                 android:gravity="center"
@@ -136,6 +182,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.293" />
+
+            <TextView
+                android:id="@+id/Amper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/Amper"
+                android:textColor="#F4F0F0"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.716" />
+
+            <TextView
+                android:id="@+id/amperValue"
+                android:layout_width="212dp"
+                android:layout_height="63dp"
+                android:gravity="center"
+                android:text="@{String.valueOf(BmsVcu_02_Model.current)}"
+                android:textColor="#F4F0F0"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.607" />
 
             <ProgressBar
                 android:id="@+id/progressBar2"
@@ -270,21 +344,21 @@
                 android:textSize="50sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintHorizontal_bias="0.501"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/speedPanel"
-                app:layout_constraintVertical_bias="0.603" />
+                app:layout_constraintVertical_bias="0.879" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="250dp"
-            android:layout_height="250dp"
+            android:layout_height="280dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.95"
+            app:layout_constraintHorizontal_bias="0.67"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
+            app:layout_constraintVertical_bias="0.70">
 
             <ImageView
                 android:id="@+id/batterypanel"
@@ -312,7 +386,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.268" />
+                app:layout_constraintVertical_bias="0.3" />
 
             <TextView
                 android:id="@+id/percentValue"
@@ -327,7 +401,22 @@
                 app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.384" />
+                app:layout_constraintVertical_bias="0.429" />
+
+
+            <TextView
+                android:id="@+id/percent_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/percent_0"
+                android:textColor="#F4F0F0"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.22"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.934" />
 
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -342,6 +431,20 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:progress="50"
                 />
+
+            <TextView
+                android:id="@+id/percent_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/percent_100"
+                android:textColor="#F4F0F0"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.649"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.065" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -349,32 +452,30 @@
             android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintHorizontal_bias="0.37"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.944">
+            app:layout_constraintVertical_bias="0.75">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/constraintLayout2"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="2   .0">
+                app:layout_constraintVertical_bias="0.0">
 
                 <ImageView
-                    android:id="@+id/chargringUnactive"
-                    android:layout_width="59dp"
-                    android:layout_height="61dp"
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0"
+                    android:contentDescription="@string/UnchargingImage"
                     app:srcCompat="@drawable/ic_chargings_symbol_unactive_24" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -382,6 +483,7 @@
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0">
@@ -393,11 +495,13 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    android:contentDescription="@string/BatteryErrorUnactiveImage"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/ic_baseline_battery_alert_unactive_24" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -411,6 +515,7 @@
                     android:id="@+id/ChargingStaionNoErrors"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:contentDescription="@string/ChargerErrorUnactiveImage"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -435,6 +540,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/EngineErrorUnactiveImage"
                     app:srcCompat="@drawable/engine_check_unactive" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 

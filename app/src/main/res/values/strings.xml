@@ -4,8 +4,15 @@
     <string name="SpeedPanelImage">SpeedPanel:</string>
     <string name="BatteryPanelImage">BatteryPanel:</string>
     <string name="HeatPanelImage">HeatPanel:</string>
+    <string name="BatteryErrorUnactiveImage">BatteryErrorUnactive:</string>
+    <string name="ChargerErrorUnactiveImage">ChargerErrorUnactive:</string>
+    <string name="EngineErrorUnactiveImage">EngineErrorUnactive:</string>
+    <string name="UnchargingImage">Uncharging:</string>
+
 
     <string name="km_peer_hour">Km/h</string>
+    <string name="Amper">Kw</string>
+
     <string name="km_hour_0">0</string>
     <string name="km_hour_20">20</string>
     <string name="km_hour_40">40</string>
@@ -16,8 +23,14 @@
     <string name="km_hour_140">140</string>
 
     <string name="percent">%</string>
+    <string name="percent_0">0</string>
+    <string name="percent_100">100</string>
+
 
     <string name="temp">°С</string>
+    <string name="temp_0">0</string>
+    <string name="temp_40">-40</string>
+    <string name="temp_160">160</string>
 
 
 

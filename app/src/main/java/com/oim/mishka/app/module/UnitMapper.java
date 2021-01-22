@@ -18,6 +18,7 @@ public class UnitMapper {
         batteryDataMonitor = new BatteryDataMonitor();
         inv_vcu_03_model = new Inv_vcu_03_Model();
         vcuToAll_01 = new VcuToAll_01_Model();
+        fillMapUnit();
     }
     private void fillMapUnit(){
         dataModel.put(0xCB1D0F3, batteryDataMonitor.getBmsVcu01_model());

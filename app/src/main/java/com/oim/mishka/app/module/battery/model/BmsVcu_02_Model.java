@@ -10,6 +10,10 @@ public class BmsVcu_02_Model implements DataFromDeviceModel {
     private BmsVcu_02 bmsVcu02;
     private ObservableFloat current;
 
+    public ObservableFloat getCurrent() {
+        return current;
+    }
+
     public BmsVcu_02_Model(){
         bmsVcu02 = new BmsVcu_02();
         current = new ObservableFloat(0.0f);
